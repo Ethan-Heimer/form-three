@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap" rel="stylesheet">
+
+    <title>Forms</title>
+</head>
+<body>
+    <h1 class="primary-block block-big">Datalist</h1>
+    <form class="primary-block block-small">
+        <label for="flavors">Choose flavor from list</label>
+        <input list="flavors-options" name="flavors" id="flavors">
+        <datalist id="flavors-options">
+            <option value="Chocolate">
+            <option value="Coconut">
+            <option value="Mint">
+            <option value="Strawberry">
+            <option value="Vanilla">
+        </datalist>
+    </form>
+
+    <h1 class="primary-block block-big">Select</h1>
+    <form class="primary-block block-small">
+        <label for="flavors-select">Choose flavor from list</label>
+        
+        <select id="flavors-select" style="color: black;">
+            <option value="Chocolate">Chocolate</option>
+            <option value="Coconut">Coconut</option>
+            <option value="Mint">Mint</option>
+            <option value="Strawberry">Strawberry</option>
+            <option value="Vanilla">Vanilla</option>
+        </select>
+    </form>
+
+    <h1 class="primary-block block-big">FieldSet & Legend</h1>
+    <form class="primary-block block-small">
+       <fieldset class="elements-center">
+            <legend>Choose your favorite monster</legend>
+
+            <div>
+                <input type="radio" id="kraken" name="monster" value="kraken">
+                <label for="kraken">Kraken</label>
+            </div>
+           
+            <div>
+                <input type="radio" id="sasquatch" name="monster" value="sasquatch">
+                <label for="sasquatch">Sasquatch</label>
+            </div>
+            
+            <div>
+                <input type="radio" id="Mothman" name="monster" value="mothman">
+                <label for="Mothman">Mothman</label>
+            </div>
+       </fieldset>
+    </form>
+
+    <h1 class="primary-block block-big">Meter</h1>
+    <form class="primary-block block-small elements-center">
+        <div class>
+            <label for="temprature">Temprature</label>
+            <meter id="tempurature" min="0" max="120" value="90"></meter>
+        </div>
+
+        <div>
+            <label for="temprature">Temprature</label>
+            <meter id="tempurature" min="0" max="120" value="50"></meter>
+        </div>
+
+        <div>
+            <label for="temprature">Temprature</label>
+            <meter id="tempurature" min="0" max="120" value="75"></meter>
+        </div>
+    </form>
+
+    <h1 class="primary-block block-big">Output</h1>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)" class="primary-block block-small">
+        <input type="range" id="a" value="50">
+        +<input type="number" id="b" value="25">
+        =<output name="x" for="a b"></output>
+    </form>
+
+    <form oninput="x.value=parseInt(a.value)*parseInt(b.value)" class="primary-block block-small">
+        <input type="number" id="a">*
+        <input type="number" id="b">=
+        <output name="x" for="a b"></output>
+    </form>
+</body>
+</html>

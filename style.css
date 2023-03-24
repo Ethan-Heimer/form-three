@@ -1,0 +1,46 @@
+:root{
+    --body-color: #30343F;
+    --primary-color: #1B2021;
+    --text-color: White;
+
+    --block-padding: 3vmax;
+}
+
+*{
+    box-sizing: border-box;
+
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    background-color: var(--body-color);
+    display: grid;
+    place-items: center;
+}
+
+.primary-block{
+    background-color: var(--primary-color);
+    box-shadow: black .5vmax .5vmax .5vmax;
+    text-align: center;
+    color: var(--text-color)
+}
+
+.block-big{
+    padding: var(--block-padding);
+    width: 50vw;
+   
+}
+
+.block-small{
+    padding: var(--block-padding);
+    width: 20vw;
+}
+
+.meter-yellow{
+    background-color: yellow;
+}
+
+.elements-center{
+    display: grid;
+    place-items: center;
+}
